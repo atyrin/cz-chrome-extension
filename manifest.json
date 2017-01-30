@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Replacer",
+  "description": "Расширение для чештины",
+  "version": "1.1",
+  "icons": { "128": "icon.png" },
+  
+  "permissions": [
+    "https://slovnik.seznam.cz/",
+    "https://translate.google.ru/"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "https://slovnik.seznam.cz/*",
+        "https://translate.google.ru/*",
+        "https://translate.google.com/*"
+      ],
+      "js" : ["logic.js"],
+      "run_at" : "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
