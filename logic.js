@@ -56,17 +56,17 @@ Object.keys(json.sites).forEach(function(k){
 
 
 elem.oninput = function(){
-		var lastSymbolIndex = elem.value.search(["\'|\""])
-		console.log("Find \' or \" at: " + lastSymbolIndex);
-		if(lastSymbolIndex > 0){
-			if(elem.value[lastSymbolIndex] == "\'"){
-				repl(elem, json.letters.charka, lastSymbolIndex)
-			}
-			else{
-				repl(elem, json.letters.hachek, lastSymbolIndex)
-			}
+	var lastSymbolIndex = elem.value.search(["\'|\""])
+	console.log("Find \' or \" at: " + lastSymbolIndex);
+	if(lastSymbolIndex > 0){
+		if(elem.value[lastSymbolIndex] == "\'"){
+			repl(elem, json.letters.charka, lastSymbolIndex)
+		}
+		else{
+			repl(elem, json.letters.hachek, lastSymbolIndex)
 		}
 	}
+}
 
 function repl(element, dict, index){
 	Object.keys(dict).forEach(function(k){
@@ -76,68 +76,3 @@ function repl(element, dict, index){
 		}
 	});
 }
-/*
-		
-		var lastSymbol = elem.value[elem.value.length - 1];
-		var preLastSymbol = elem.value[elem.value.length - 2];
-		if (lastSymbol == "\'"){
-			console.log("Find spec symbol \'");
-			Object.keys(json.letters.charka).forEach(function(k){
-				if (preLastSymbol == k){
-					createNewValue(json.letters.charka[k]);
-					return;
-				}
-			});
-		}
-		else if(lastSymbol == "\""){
-			console.log("Find spec symbol \"")
-			Object.keys(json.letters.hachek).forEach(function(k){
-				if (preLastSymbol == k){
-					createNewValue(json.letters.hachek[k]);
-					return;
-				}
-			});
-		}
-	
-}
-
-
-
-
-
-
-
-elem.oninput = function(){
-	if(elem.value.length > 1){
-		var lastSymbolIndex = elem.value.search(["\'\""])
-		if(lastSymbolIndex > 0){}
-
-		
-		var lastSymbol = elem.value[elem.value.length - 1];
-		var preLastSymbol = elem.value[elem.value.length - 2];
-		if (lastSymbol == "\'"){
-			console.log("Find spec symbol \'");
-			Object.keys(json.letters.charka).forEach(function(k){
-				if (preLastSymbol == k){
-					createNewValue(json.letters.charka[k]);
-					return;
-				}
-			});
-		}
-		else if(lastSymbol == "\""){
-			console.log("Find spec symbol \"")
-			Object.keys(json.letters.hachek).forEach(function(k){
-				if (preLastSymbol == k){
-					createNewValue(json.letters.hachek[k]);
-					return;
-				}
-			});
-		}
-	}
-}
-
-function createNewValue(newAdditionalValue, element=elem){
-	console.log("Case: ", newAdditionalValue);
-	element.value = element.value.substring(0, element.value.length - 2) + newAdditionalValue;
-}
-*/
