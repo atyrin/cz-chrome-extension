@@ -3,19 +3,21 @@
 
   "name": "Replacer",
   "description": "Расширение для чештины",
-  "version": "1.2",
+  "version": "1.3",
   "icons": { "128": "icon.png" },
   
   "permissions": [
     "https://slovnik.seznam.cz/",
-    "https://translate.google.ru/"
+    "https://translate.google.ru/",
+    "http://prirucka.ujc.cas.cz/"
   ],
   "content_scripts" : [
     {
       "matches" : [
         "https://slovnik.seznam.cz/*",
         "https://translate.google.ru/*",
-        "https://translate.google.com/*"
+        "https://translate.google.com/*",
+        "http://prirucka.ujc.cas.cz/*"
       ],
       "js" : ["logic.js"],
       "run_at" : "document_end"

@@ -2,7 +2,8 @@ var data = `
   {
 		"sites" : {
 			"translate.google" : "source",
-			"slovnik.seznam.cz" : "q"
+			"slovnik.seznam.cz" : "q",
+			"prirucka.ujc.cas.cz" : "slovo"
 		},
 		"letters" : {
 			"charka" : {
@@ -47,7 +48,7 @@ var elem;
 
 Object.keys(json.sites).forEach(function(k){
     if (document.URL.includes(k)){
-			console.log("k: " + k);
+			console.log("Current site: " + k);
 			elem = document.getElementById(json.sites[k])
 			return;
 		}
@@ -57,8 +58,8 @@ Object.keys(json.sites).forEach(function(k){
 
 elem.oninput = function(){
 	var lastSymbolIndex = elem.value.search(["\'|\""])
-	console.log("Find \' or \" at: " + lastSymbolIndex);
 	if(lastSymbolIndex > 0){
+		console.log("Find \' or \" at: " + lastSymbolIndex);
 		if(elem.value[lastSymbolIndex] == "\'"){
 			repl(elem, json.letters.charka, lastSymbolIndex)
 		}
