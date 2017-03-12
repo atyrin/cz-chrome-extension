@@ -1,13 +1,15 @@
 # Replacer
 
-Расширение для браузера Chrome, предназначение для автозамены символов в специфичные для чешского алфавита буквы.
+Chrome extension for auto replacement english letters to specific сzech letters on some useful sites.
 
-### Использование:
-* Буква + ' преобразуется в букву с чаркой. Пример: e' → é
-* Буква + " преобразуется в букву в гачеком. Пример: e" → ě
-* Для замены буквы u на u с кружочком необходимо использовать двойную кавычку.
+### Usage:
+* Letter + ' transform this letter to same letter with čárka. Example: e' → é
+* Letter + " transform this letter to same letter with háček. Example: e" → ě
+* For replacement letter u to ů (s kroužkem) use double quotation mark. Example u" → ů.
 
-### Добавление в браузер.
-Добавить в барузер расширение можно двумя способами:
-* Дабл клик по собранному crx-файлу или драг-энд-дроп на страницу с расширениями: *chrome://extensions/*. В этом случае расширение задизейблится при рестарте хрома.
-* Из исходного кода. Для этого надо перейти в режим разработчика на странице с расширениями *chrome://extensions/* и выбрать *Load unpacked extension*. В этом случае браузер при перезапуске будет напоминать, что стоит какое-то небезопасное расширение.
+### Installation steps.
+This extension wasn't uploaded to Chrome Web Store. So installation have some difficulties.
+* download source code
+* open extension settings at your chromium-based browser, you can do it via link *chrome://extensions/* (Chrome, Yandex Browser and so on)
+* click to *Load unpacked extension* and choose folder with source code
+* if you are using Chrome, it will br notificate you that there is insecure extension on every startup of browser.
